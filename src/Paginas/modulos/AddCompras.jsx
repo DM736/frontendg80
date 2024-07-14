@@ -29,7 +29,7 @@ const createHisCompra = async()=>{
         const msg ="Hubo un error al agregar la compra"
         Alert(msg, "Error", "error","#DC3545");
     }else {
-        const msg="El compra fue agregada con exito";
+        const msg="La compra fue agregada con exito";
         Alert(msg, "Informacion", "success","#198754");
         setCompras({nombreComprador:"",numeroProductos:"",total: "",medioDPago: "",nombreTienda: "",fecha:""});
         naveg("/compras")
