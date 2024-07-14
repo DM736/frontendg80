@@ -5,7 +5,7 @@ import Footer from '../../Componentes/Footer'
 import Navbar from '../../Componentes/Navbar'
 import SidebarContainer from '../../Componentes/SidebarContainer' 
 import APIInvoke from "../../configuracion/APIInvoke"
-
+import Alert from '../../Extencion/Aviso'
 
 
 const EditClientes = () => {
@@ -24,6 +24,8 @@ const EditClientes = () => {
         await APIInvoke.invokePUT(`/api/clientes/${id}`, {
             nombres: nombres, apellidos: apellidos, cedula:cedula, correo:correo, numeroContacto: numeroContacto, nit:nit, direccion:direccion
         })
+        const msg="Se ha actualizado los datos del cliente";
+        Alert(msg, "Informacion", "success","#198754");
         nav('/clientes');
     }
     const getCliente = async ()=> {
