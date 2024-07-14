@@ -1,6 +1,6 @@
 const obb={
     api:{
-        baseURL: "http://localhost:5000"
+        baseURL: "https://backendg80-zhvi.onrender.com"
     }
 }
 export default obb
