@@ -20,20 +20,8 @@ const TokVen = () =>{
 const actualTime = Date.now();
 
 if(actualTime >= timeexp){
-    swal({
-        title: 'Expiro su sesion',
-        text: "su sesion ha expirado, porfavor  vuelva a inicar sesion",
-        icon: 'warning',
-        buttons: {
-            confirm: {
-                text: 'ok',
-                value: true,
-                visible: true,
-                className: 'btn btn-danger',
-                closeModal: true
-            }
-        }
-    });
+    const msg="Su sesion ha expirado, porfavor  vuelva a inicar sesion";
+    Alert(msg, "Informacion", "warning","#F2D544");
     setTimeout(() =>{
         localStorage.removeItem("token");
         setRedirec(true);
