@@ -173,7 +173,7 @@ const EditCompras = () => {
                             </div>
                             </div>
                             <div className="card-footer text-center">
-                                <button type="submit" className="btn btn-block btn-primary">Editar cliente</button> 
+                                <button type="submit" className="btn btn-block btn-primary">Editar compra</button> 
                             </div>
                         </form>
                     </div>
