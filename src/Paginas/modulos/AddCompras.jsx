@@ -186,7 +186,7 @@ const oneChange = (e) => {
                             </div>
                         </div>
                             <div className="card-footer text-center">
-                                <button type="submit" className="btn btn-block btn-primary">Agregar cliente</button> 
+                                <button type="submit" className="btn btn-block btn-primary">Editar Compra</button> 
                             </div>
                         </form>
                     </div>
