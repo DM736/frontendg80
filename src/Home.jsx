@@ -42,7 +42,7 @@ export const Home = () => {
                                 <div className='icon'>
                                     <i className='fa fa-edit'></i>
                                 </div>
-                                <Link to={"/compras"} className='small-box-footer'>Ver Clientes</Link>
+                                <Link to={"/compras"} className='small-box-footer'>Ver Compras</Link>
                             </div>
                         </div>
                     </div>
