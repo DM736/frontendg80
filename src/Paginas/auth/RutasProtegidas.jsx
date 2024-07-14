@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { Navigate } from 'react-router-dom';
-import swal from 'sweetalert';
+import Alert from '../../Extencion/Aviso';
 
 
 const RutasProtegidas = ({ element }) => {
