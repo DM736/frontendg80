@@ -10,6 +10,7 @@ import RutasProtegidas from './Paginas/auth/RutasProtegidas'
 import ShowCompra from './Paginas/modulos/Moscompras'
 import AddNewCompra from './Paginas/modulos/AddCompras'
 import EditCompras from './Paginas/modulos/Edicompra'
+import MosCitaMed from './Paginas/modulos/Moscita'
 function App() {
  
 //<Route path="/" exact element={<Inicio/>}/>
@@ -30,6 +31,8 @@ function App() {
             <Route path="/compras" exact element={<RutasProtegidas element= {<ShowCompra/>}/>}/>
             <Route path="/compras/agregar" exact element={<RutasProtegidas element= {<AddNewCompra/>}/>}/>
             <Route path="/compras/editar/:id" exact element={<RutasProtegidas element= {<EditCompras/>}/>}/>
+
+            <Route path="/citas" exact element={<RutasProtegidas element= {<MosCitaMed/>}/>}/>
           </Routes>
         </BrowserRouter>
       </Fragment>

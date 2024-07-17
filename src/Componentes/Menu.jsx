@@ -29,6 +29,14 @@ const Menu = () => {
                             Compras
                         </p>
                     </Link>
+                </li> 
+                <li className="nav-item">
+                    <Link to={"/citas"} className="nav-link">
+                        <i className="nav-icon fas fa-edit" />
+                        <p>
+                            Citas Medicas
+                        </p>
+                    </Link>
                 </li>
             </ul>
         </nav>
