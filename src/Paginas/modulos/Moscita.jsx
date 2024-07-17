@@ -71,13 +71,12 @@ const MosCitaMed = () => {
                             <tbody>
                                 {cita.map((cli, index)=>(
                                 <tr key={index}>
-                                    <td>{cli.nombres}</td>
-                                    <td>{cli.apellidos}</td>
-                                    <td>{cli.cedula}</td>
-                                    <td>{cli.correo}</td>
-                                    <td>{cli.numeroContacto}</td>
-                                    <td>{cli.nit}</td>
-                                    <td>{cli.direccion}</td>
+                                    <td>{cli.entidad}</td>
+                                    <td>{cli.especialidad}</td>
+                                    <td>{cli.sede}</td>
+                                    <td>{cli.costo}</td>
+                                    <td>{cli.hora}</td>
+                                    <td>{cli.fecha}</td>
                                     <td>
                                         <Link to={`/citas/editar/${cli._id}`} className='btn btn-primary mt-2 mb-2'><i className='fa-solid fa-pen-to-square'></i></Link>
                                         <button onClick={(e)=>delCitas(e, cli._id)} className='btn btn-danger'><i className='fa-solid fa-trash'></i></button>                                    
