@@ -12,7 +12,6 @@ const MosCitaMed = () => {
     const getCitas= async ()=>{
         const response = await APIInvoke.invokeGET("/api/citas");
         setCita(response);
-        console.log(response)
     }
     useEffect(()=>{
         getCitas();
@@ -62,7 +61,6 @@ const MosCitaMed = () => {
                                     <th style={{width:'15%'}}>EPS</th>
                                     <th style={{width:'10%'}}>Tipo de especialidad</th>
                                     <th style={{width:'10%'}}>Sede </th>
-                                    <th style={{width:'15%'}}>Correo</th>
                                     <th style={{width:'10%'}}>Costo de especialidad</th>
                                     <th style={{width:'10%'}}>Hora</th>
                                     <th style={{width:'10%'}}>Fecha</th>
@@ -71,16 +69,17 @@ const MosCitaMed = () => {
                             <tbody>
                                 {cita.map((cli, index)=>(
                                 <tr key={index}>
+                                    <td>
+                                        <Link to={`/citas/editar/${cli._id}`} className='btn btn-primary mt-2 mb-2'><i className='fa-solid fa-pen-to-square'></i></Link>
+                                        <button onClick={(e)=>delCitas(e, cli._id)} className='btn btn-danger'><i className='fa-solid fa-trash'></i></button>                                    
+                                    </td>
                                     <td>{cli.entidad}</td>
                                     <td>{cli.especialidad}</td>
                                     <td>{cli.sede}</td>
                                     <td>{cli.costo}</td>
                                     <td>{cli.hora}</td>
                                     <td>{cli.fecha}</td>
-                                    <td>
-                                        <Link to={`/citas/editar/${cli._id}`} className='btn btn-primary mt-2 mb-2'><i className='fa-solid fa-pen-to-square'></i></Link>
-                                        <button onClick={(e)=>delCitas(e, cli._id)} className='btn btn-danger'><i className='fa-solid fa-trash'></i></button>                                    
-                                    </td>
+                                    
                                 </tr>
                             ))}
                             </tbody>
