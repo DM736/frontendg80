@@ -16,12 +16,12 @@ const {entidad,especialidad,sede,costo,hora,fecha}=cita
 
 const creCita = async()=>{
     const data ={
-        entidad: entidad.entidad,
-        especialidad: especialidad.especialidad,
-        sede: sede.sede,
-        costo: costo.costo,
-        hora: hora.hora,
-        fecha: fecha.fecha
+        entidad: cita.entidad,
+        especialidad: cita.especialidad,
+        sede: cita.sede,
+        costo: cita.costo,
+        hora: cita.hora,
+        fecha: cita.fecha
     }
     console.log(cita);
     const res = await APIInvoke.invokePOST("/api/citas", data);
@@ -78,7 +78,7 @@ const oneChange = (e) => {
                         <form onSubmit={oneSubmit}>
                         <div className='card-body'>
                             <div className="form-group">
-                            <label htmlFor='entidad' className='col'>Eps </label>
+                            <label htmlFor='entidad' className='col'>Eps afiliada</label>
                             <div className='d-flex justify-content-center align-items-center'>
                                 <input
                                     className="inp-text col form-control shadow-sm p-2 mb-2 bg-white rounded"
@@ -96,7 +96,7 @@ const oneChange = (e) => {
                         </div>
                         <div className='card-body'>
                             <div className="form-group">
-                            <label htmlFor='especialidad'>Especialidad requerida</label>
+                            <label htmlFor='especialidad'>Tipo de especialidad</label>
                             <div className='d-flex justify-content-center align-items-center'>
                                 <input
                                     className="form-control"
@@ -114,7 +114,7 @@ const oneChange = (e) => {
                         </div>
                         <div className='card-body'>
                             <div className="form-group">
-                            <label htmlFor='sede'>Sede de la cita</label>
+                            <label htmlFor='sede'>Sede lugar de la cita</label>
                             <div className='d-flex justify-content-center align-items-center'>
                                 <input
                                     className="form-control"
@@ -155,7 +155,7 @@ const oneChange = (e) => {
                                 <input
                                     className="form-control"
                                     placeholder="Ingrese la hora de la cita"
-                                    type="text"
+                                    type="time"
                                     id='hora'
                                     name='hora'
                                     value={hora}

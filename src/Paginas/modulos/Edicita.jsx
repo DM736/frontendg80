@@ -77,7 +77,7 @@ const EditCita = () => {
                             <div className='d-flex justify-content-center align-items-center'>
                                 <input
                                     className="inp-text col form-control shadow-sm p-2 mb-2 bg-white rounded"
-                                    placeholder="Ingrese su nombre"
+                                    placeholder="Ingrese la eps de la cita"
                                     type="text"
                                     id="entidad"
                                     name="entidad"
@@ -94,7 +94,7 @@ const EditCita = () => {
                             <div className='d-flex justify-content-center align-items-center'>
                                 <input
                                     className="inp-text col form-control shadow-sm p-2 mb-2 bg-white rounded"
-                                    placeholder="Ingrese su nombre"
+                                    placeholder="Ingrese el tipo de especialidad requerida"
                                     type="text"
                                     id="especialidad"
                                     name="especialidad"
@@ -124,11 +124,11 @@ const EditCita = () => {
                         </div>
                         <div className='card-body'>
                             <div className="form-group">
-                            <label htmlFor='costo'>Costo costo de la especialidad</label>
+                            <label htmlFor='costo'>Costo de la especialidad</label>
                             <div className='d-flex justify-content-center align-items-center'>
                                 <input
                                     className="col form-control shadow-sm p-2 mb-2 bg-white rounded"
-                                    placeholder="Ingrese el costo de la compra"
+                                    placeholder="Ingrese el costo de la especialidad"
                                     type="number"
                                     id="costo"
                                     name="costo"
@@ -147,7 +147,7 @@ const EditCita = () => {
                                 <input
                                     className=" col form-control shadow-sm p-2 mb-2 bg-white rounded"
                                     placeholder="ingrese la hora de la cita"
-                                    type="text"
+                                    type="time"
                                     id="hora"
                                     name="hora"
                                     value={hora}

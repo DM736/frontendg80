@@ -6,7 +6,7 @@ import Navbar from '../../Componentes/Navbar'
 import SidebarContainer from '../../Componentes/SidebarContainer' 
 import APIInvoke from "../../configuracion/APIInvoke"
 import Alert from '../../Extencion/Aviso'
-import "../../form.css"
+
 
 
 const AddNewCompra = () => {
