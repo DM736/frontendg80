@@ -43,7 +43,7 @@ const MosCitaMed = () => {
             <section className='content'>
                 <div className='card'>
                     <div className='card-header'>
-                        <h3 className='card-title'><Link to={"/clientes/agregar"} className='btn btn-block btn-primary btn-sm'>Crear Cita Medica</Link></h3>
+                        <h3 className='card-title'><Link to={"/citas/agregar"} className='btn btn-block btn-primary btn-sm'>Crear Cita Medica</Link></h3>
                         <div className='card-tool'>
                             <button type="button" className='btn btn-tool' data-card-widget="collapse" title="collapse">
                                 <i className='fas fa-minus'></i>
@@ -55,14 +55,14 @@ const MosCitaMed = () => {
                     </div>
                     <div className='card-body'>
                         <table className='table table-bordered'>
-                            <thead>
+                            <thead className="table-dark">
                                 <tr>
-                                    <th style={{width:'15%'}}>Acciones</th>
+                                    <th style={{width:'17%'}}>Acciones</th>
                                     <th style={{width:'15%'}}>EPS</th>
                                     <th style={{width:'10%'}}>Tipo de especialidad</th>
                                     <th style={{width:'10%'}}>Sede </th>
                                     <th style={{width:'10%'}}>Costo de especialidad</th>
-                                    <th style={{width:'10%'}}>Hora</th>
+                                    <th style={{width:'8%'}}>Hora</th>
                                     <th style={{width:'10%'}}>Fecha</th>
                                 </tr>
                             </thead>
@@ -70,8 +70,8 @@ const MosCitaMed = () => {
                                 {cita.map((cli, index)=>(
                                 <tr key={index}>
                                     <td>
-                                        <Link to={`/citas/editar/${cli._id}`} className='btn btn-primary mt-2 mb-2'><i className='fa-solid fa-pen-to-square'></i></Link>
-                                        <button onClick={(e)=>delCitas(e, cli._id)} className='btn btn-danger'><i className='fa-solid fa-trash'></i></button>                                    
+                                        <Link to={`/citas/editar/${cli._id}`} className='btn btn-primary mt-2 mb-2'><i className='fa-solid fa-pen-to-square'></i>Editar</Link>
+                                        <button onClick={(e)=>delCitas(e, cli._id)} className='btn btn-danger'><i className='fa-solid fa-trash'></i>Eliminar</button>                                    
                                     </td>
                                     <td>{cli.entidad}</td>
                                     <td>{cli.especialidad}</td>

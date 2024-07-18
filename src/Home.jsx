@@ -46,6 +46,19 @@ export const Home = () => {
                             </div>
                         </div>
                     </div>
+                    <div className='row'>
+                        <div className='col-lg-3 col-6'>
+                            <div className='small-box bg-info'>
+                                <div className='inner'>
+                                    <h3>Citas Medicas</h3>
+                                </div>
+                                <div className='icon'>
+                                    <i className='fa fa-edit'></i>
+                                </div>
+                                <Link to={"/citas"} className='small-box-footer'>Ver Citas</Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
