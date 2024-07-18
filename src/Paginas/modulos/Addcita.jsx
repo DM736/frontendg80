@@ -32,7 +32,7 @@ const creCita = async()=>{
     }else {
         const msg="La cita medica fue creada con exito";
         Alert(msg, "Informacion", "success","#198754");
-        setCliente({entidad:"",especialidad:"",sede: "",costo: "",hora: "",fecha:""});
+        setMedCita({entidad:"",especialidad:"",sede: "",costo: "",hora: "",fecha:""});
         naveg("/citas")
     }
     
